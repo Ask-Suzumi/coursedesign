@@ -3,7 +3,7 @@
  * ==========================================================
  * 【项目说明】
  * 本项目是一个基于C语言的区块链模拟系统。
- * 组长已完成：系统架构、加密库、文件存储、UI交互。
+ * 项目已预置：系统架构、加密库、文件存储、UI交互。
  * 组员需完成：核心数据结构与算法逻辑 (见下方 MODULE A - E)。
  *
  * 【开发指南】
@@ -33,7 +33,7 @@
 #define MEMPOOL_SIZE 100
 #define BLOCK_INTERVAL 10 
 
-// === 2. SHA-256 加密库 (组长已实现，直接调用) ===
+// === 2. SHA-256 加密库 (直接调用) ===
 // 功能：calc_sha256(input, output) -> 将字符串 input 加密为 64位哈希 output
 #define ROTR(x,n) (((x)>>(n))|((x)<<(32-(n))))
 #define SIG0(x) (ROTR(x,7)^ROTR(x,18)^((x)>>3))
@@ -68,7 +68,7 @@ typedef struct Contact {
     char name[32];
     char pubkey[65];
     struct Contact* next;
-} Contact;
+} Contact;//定义用户名和公钥对照表
 
 typedef struct {
     int index;
@@ -78,7 +78,7 @@ typedef struct {
     int difficulty;
     long nonce;
     char miner_pubkey[65]; 
-} BlockHeader;
+} BlockHeader;区块头
 
 typedef struct Block {
     BlockHeader header;
@@ -87,7 +87,7 @@ typedef struct Block {
     char hash[65];
     struct Block* next; // 双向链表后继
     struct Block* prev; // 双向链表前驱
-} Block;
+} Block;区块
 
 // 全局变量 (组员需引用这些变量)
 Block* g_head = NULL;       // 链表头
@@ -102,7 +102,7 @@ time_t g_last_pack_time = 0;
 char g_satoshi_priv[65] = {0}; char g_satoshi_pub[65] = {0};
 char g_user_pubkey[65] = {0}; char g_user_privkey[65] = {0}; char g_user_name[32] = "GUEST";
 
-// 预声明辅助函数 (组长已实现)
+// 预声明辅助函数 (已实现)
 void save_miners(); void save_contacts(); void save_mempool();
 void add_contact_manual(const char* n, const char* p); 
 
@@ -256,7 +256,7 @@ void recursive_trace(Block* b, const char* target, int depth) {
 
 
 // ==========================================
-// 7. 组长保留区域 (主逻辑与I/O，组员无需修改)
+// 7. 项目保留区域 (主逻辑与I/O，组员无需修改)
 // ==========================================
 
 // ... (此处省略 save/load 函数的具体实现，组长在集成时负责保留原代码) ...
