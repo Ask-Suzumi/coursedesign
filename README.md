@@ -226,4 +226,4 @@ gcc g6chain_collab.c -o g6chain
 
 **Happy Coding! Let's build our own Blockchain! 🚀**
 
-（声明：项目仅是对区块对区块链技术的简单模拟以供交流学习）
+（声明：项目仅是对区块链技术的简单模拟以及数据结构与算法课程设计需要，仅供交流学习）
