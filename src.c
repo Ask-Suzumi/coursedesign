@@ -13,6 +13,11 @@
  * 4. 尽可能尝试 "加分拓展项"。
  * ==========================================================
  */
+//A	徐廷瀚
+//B	董毅
+//C	张宗烜
+//D	游骏宏
+//E	李易章
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -110,7 +115,7 @@ void add_contact_manual(const char* n, const char* p);
 // 🔽 组员协作区域 (请在此处开始编写)
 // ============================================================
 
-/* * 【MODULE A: 矿工与链表管理】
+/* * 【MODULE A: 矿工与链表管理】----徐廷瀚
  * 任务：实现单向链表的插入与删除。
  * 知识点：头插法、指针操作、内存释放。
  */
@@ -150,7 +155,7 @@ void sort_miners_by_balance() {
 }
 
 
-/* * 【MODULE B: 审计与查询】
+/* * 【MODULE B: 审计与查询】---董毅
  * 任务：遍历链表进行数据统计与查找。
  * 知识点：链表遍历、字符串比较、逻辑判断。
  */
@@ -184,7 +189,7 @@ const char* resolve_address(const char* input_name) {
 // 提示：支持输入 "Sat" 就能返回 "SATOSHI" (使用 strncmp 或 strstr)。
 
 
-/* * 【MODULE C: 调度与结构化】
+/* * 【MODULE C: 调度与结构化】---张宗烜
  * 任务：管理交易池数组，生成默克尔根。
  * 知识点：数组队列操作、字符串拼接、Hash计算。
  */
@@ -208,7 +213,7 @@ void calc_merkle_root(Block* b) {
 // 提示：在入池或打包时，优先处理金额较大的交易 (排序 g_mempool)。
 
 
-/* * 【MODULE D: 核心算法 (挖矿)】
+/* * 【MODULE D: 核心算法 (挖矿)】---游骏宏
  * 任务：组装区块头信息，进行工作量证明 (PoW)。
  * 知识点：暴力枚举、字符串格式化。
  */
@@ -235,7 +240,7 @@ void perform_pow(Block* b) {
 // 提示：传入难度参数，不再固定 "000"，而是根据参数判断前缀0的个数。
 
 
-/* * 【MODULE E: 数据分析与递归】
+/* * 【MODULE E: 数据分析与递归】---李易章
  * 任务：实现递归资金溯源。
  * 知识点：递归函数、DFS思想。
  */
@@ -274,3 +279,4 @@ void recursive_trace(Block* b, const char* target, int depth) {
 //     printf("Please implement your modules.\n");
 //     return 0;
 // }
+
