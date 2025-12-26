@@ -174,7 +174,7 @@ gcc g6chain_collab.c -o g6chain
 ### G6-Chain User System 项目架构图
 
 
-！[image](Struct.svg)
+![Struct](https://ask-suzumi.github.io/Struct.svg)
 
 ### 架构分层详解
 
